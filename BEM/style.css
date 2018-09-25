@@ -1,0 +1,86 @@
+html, body{
+  font-family: sans-serif;
+  font-size: .8em;
+}
+
+body{
+  background-color: blue;
+}
+
+h1{
+  color: white;
+  text-align: center;
+  font-family: monospace;
+  font-size: 30px;
+}
+/* section beperken in breedte */
+.cover{
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: 2em;
+}
+
+.cover__article {
+  transform: translateY(-0px);
+  background-color: rgba(255,255,255,0.7);
+  padding: 1.5em;
+  box-sizing: border-box;
+  width: 300px;
+  height: 300px;
+  transition: 1s;
+}
+
+.cover__img{
+  display: block;
+}
+
+.cover__article__artiest{
+
+}
+
+.cover__article__list:hover{
+  background-color: darkgrey;
+}
+
+/* de animatie via transition */
+.cover:hover article {
+  transform: translateY(-300px);
+  cursor: pointer;
+}
+
+/* 2 koloms layout */
+@media screen and (min-width: 640px) {
+  body{
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+  }
+  h1{
+    grid-column: 1/3;
+  }
+  .cover{
+    justify-self: center;
+  }
+}
+
+/* 3 koloms layout */
+@media screen and (min-width: 940px){
+  body{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  h1{
+    grid-column: 1/4;
+  }
+
+}
+
+/* 4 koloms layout */
+@media screen and (min-width: 1240px){
+  body{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  h1{
+    grid-column: 1/5;
+  }
+
+}
